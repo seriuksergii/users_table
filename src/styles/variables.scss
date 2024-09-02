@@ -1,0 +1,12 @@
+$primary-color: #32cb39;
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$font-family: 'Roboto', sans-serif;
+
+$table-header-bg: $primary-color;
+$table-header-color: #fff;
+$table-row-hover-bg: lighten($primary-color, 45%);
+$border-radius: 8px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
