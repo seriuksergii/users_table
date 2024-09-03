@@ -8,11 +8,11 @@ To run this project locally:
 
 1.	Clone the Repository:
 
-         https://github.com/seriuksergii/react-todo.git
+         https://github.com/seriuksergii/users_table.git
 
 2.	Navigate to the project directory:
 
-         cd react-todo
+         cd users-table-2
 
 3.	Install dependencies:
 
@@ -27,6 +27,8 @@ To run this project locally:
 Technologies Used:
 
 •	React
+
+•	Redux
 
 •	TypeScript
 
