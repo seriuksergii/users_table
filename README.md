@@ -1,6 +1,6 @@
 Check out the live demo
 
-[Demo](https://seriuksergii.github.io/react-todo/)
+[Demo](https://users-table-p9m9-6xq80q7j4-seriuksergiis-projects.vercel.app)
 
 Installation
 
