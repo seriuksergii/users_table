@@ -1,4 +1,4 @@
-In this project, a technology stack including React, Redux Toolkit, TypeScript, and Axios was used to create and manage the application state. The main task was to develop a user table with filtering and pagination features.
+In this project, a technology stack including # AReact, # ARedux Toolkit, # ATypeScript, and # AAxios was used to create and manage the application state. The main task was to develop a user table with filtering and pagination features.
 
 React: Used to create a component-based interface, including the user table, filter form, and pagination elements. Components are divided into logical blocks, ensuring their reusability and maintainability.
 Redux Toolkit: Applied for centralized state management, simplifying the organization and handling of user-related state. A slice was created for users, containing the state, asynchronous actions for loading data, and user list filtering.
