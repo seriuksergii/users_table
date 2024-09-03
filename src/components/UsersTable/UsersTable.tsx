@@ -26,13 +26,11 @@ export const UsersTable = () => {
     setCurrentPage(1);
   }, [filter]);
 
-  const indexOfLastUser = currentPage * usersPerPage;
-  const indexOfFirstUser = indexOfLastUser - usersPerPage;
-  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
-
+  const currentUsers = users.slice(
+    (currentPage - 1) * usersPerPage,
+    currentPage * usersPerPage
+  );
   const totalPages = Math.ceil(users.length / usersPerPage);
-
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setFilter(e.target.value));
@@ -43,17 +41,14 @@ export const UsersTable = () => {
       <h1 className="title">Users Table</h1>
       <div className="block">
         <div className="input-group">
-          <div>
-            <label className="input-label" htmlFor="filter"></label>
-            <input
-              id="filter"
-              type="text"
-              placeholder="Search"
-              className="filter-input"
-              value={filter}
-              onChange={handleFilterChange}
-            />
-          </div>
+          <input
+            id="filter"
+            type="text"
+            placeholder="Search"
+            className="filter-input"
+            value={filter}
+            onChange={handleFilterChange}
+          />
         </div>
 
         <table className="table is-striped is-hoverable is-fullwidth">
@@ -69,8 +64,7 @@ export const UsersTable = () => {
           <tbody>
             {currentUsers.map((user, index) => (
               <tr key={user.id}>
-                <td>{indexOfFirstUser + index + 1}</td>{' '}
-                {/* Нумерация с учетом страницы */}
+                <td>{(currentPage - 1) * usersPerPage + index + 1}</td>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
                 <td>{user.email}</td>
@@ -90,7 +84,7 @@ export const UsersTable = () => {
                 }`}
               >
                 <button
-                  onClick={() => paginate(index + 1)}
+                  onClick={() => setCurrentPage(index + 1)}
                   className="page-link"
                 >
                   {index + 1}

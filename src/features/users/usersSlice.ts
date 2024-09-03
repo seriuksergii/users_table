@@ -39,7 +39,7 @@ const usersSlice = createSlice({
       state.filter = action.payload;
     },
   },
-  extraReducers(builder) {
+  extraReducers: (builder) => {
     builder
       .addCase(fetchUsers.pending, (state) => {
         state.status = 'loading';
@@ -60,7 +60,6 @@ export const { setFilter } = usersSlice.actions;
 export const selectFilteredUsers = (state: RootState) => {
   const { users, filter } = state.users;
   const lowercasedFilter = filter.toLowerCase();
-
   return users.filter((user) =>
     ['name', 'username', 'email', 'phone'].some((key) =>
       user[key as keyof User]
